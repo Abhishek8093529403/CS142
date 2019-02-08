@@ -1,6 +1,7 @@
+//queue using arrays
 #include<iostream>
 using namespace std;
-
+// class defined as queue
 class queuearr
 {
 	int queue[10];
@@ -10,9 +11,9 @@ class queuearr
 	public:
 		queuearr()
 		{
-			front = -1;
-			rear = -1;
-			length = 10;
+			front = -1;//initialize frontb to -1
+			rear = -1;// initialize rear to -1
+			length = 10;//initialize length to 10
 		}
 	//function to enqueue in queue	
 	void enqueue(int value)
@@ -35,12 +36,12 @@ class queuearr
 	void dequeue()
 	{
 		int value;
-		if (front == -1)
+		if (front == -1)//if queue is empty
 		{
 			cout<<"queue is empty"<<endl;
 			
 		}
-		else 
+		else //when some elements present in queue
 		{
 			value = queue[front];
 			if (front >= rear)
@@ -58,7 +59,6 @@ class queuearr
 	//display the queue
 	void display()
 	{
-		/* Function to display elements of Queue */
         int i;
         if(front==-1) {
             cout << "Empty Queue" << endl;
